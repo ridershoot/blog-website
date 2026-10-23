@@ -6,7 +6,11 @@
 
 **Status:** ready-for-agent
 
-- [ ] Link mode creates directory symlinks for whitelist tops beside the Site-owned homepage
-- [ ] Windows symlink setup is scripted or documented (Developer Mode or elevated commands)
-- [ ] Prepared content tree remains untracked by git
-- [ ] Link and copy modes share the same Publishable content whitelist
+- [x] Link mode creates directory symlinks for whitelist tops beside the Site-owned homepage
+- [x] Windows symlink setup is scripted or documented (Developer Mode or elevated commands)
+- [x] Prepared content tree remains untracked by git
+- [x] Link and copy modes share the same Publishable content whitelist
+
+## Comments
+
+- Extended `prepareContent` with `mode: "link"` using shared `PUBLISHABLE_TOP_LEVEL`. CLI `--mode copy|link`. Fixture tests assert directory symlinks, homepage file, and exclusions. Windows: `scripts/prepare-content-link.ps1` + `docs/local-setup.md` (Developer Mode / elevated, plus `ln -s` / `mklink` / `New-Item` manual examples). `content/` already gitignored.
