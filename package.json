@@ -1,0 +1,22 @@
+{
+  "name": "blog-website",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare-content": "tsx src/prepare-content/cli.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.9"
+  },
+  "packageManager": "pnpm@11.24.0",
+  "engines": {
+    "node": ">=18"
+  }
+}
