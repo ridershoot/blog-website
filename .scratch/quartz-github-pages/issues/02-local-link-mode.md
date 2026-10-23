@@ -4,7 +4,7 @@
 
 **Blocked by:** 01: Content preparation seam + tests
 
-**Status:** ready-for-agent
+**Status:** done
 
 - [x] Link mode creates directory symlinks for whitelist tops beside the Site-owned homepage
 - [x] Windows symlink setup is scripted or documented (Developer Mode or elevated commands)

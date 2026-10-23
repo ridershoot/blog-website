@@ -4,7 +4,7 @@
 
 **Blocked by:** 01: Content preparation seam + tests
 
-**Status:** ready-for-human
+**Status:** done
 
 - [x] Quartz initializes and builds successfully in the Site repo with default theme/plugins
 - [x] Site title is 「个人博客」 and language is zh-CN

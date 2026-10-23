@@ -4,7 +4,7 @@
 
 **Blocked by:** None (can start immediately)
 
-**Status:** ready-for-agent
+**Status:** done
 
 - [x] Copy mode materializes only the Publishable content whitelist from a fixture Vault
 - [x] Excluded Vault areas are absent from the prepared tree in copy mode

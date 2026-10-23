@@ -1,6 +1,6 @@
 # Quartz + GitHub Pages personal blog
 
-Status: ready-for-agent
+Status: done
 
 ## Problem Statement
 
