@@ -22,7 +22,13 @@ ln -s /path/to/Blog/assets content/assets
 # then copy or write Site templates/index.md → content/index.md
 ```
 
-Then run Quartz preview as documented once Quartz is scaffolded.
+Then preview the Personal blog (served under the project Pages base path):
+
+```bash
+pnpm preview
+```
+
+Open `http://localhost:8080/blog-website`. For a one-shot static build without the server, use `pnpm build` (output in `public/`, gitignored).
 
 ## Windows
 
