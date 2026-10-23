@@ -2,6 +2,8 @@
 
 Quartz + GitHub Pages static site generated from an Obsidian vault.
 
+**Package manager: pnpm.** Run installs only at this repo root (`cd` + `pwd` before `pnpm`); see `.cursor/rules/shell-cwd.mdc`.
+
 ## Agent skills
 
 ### Issue tracker
