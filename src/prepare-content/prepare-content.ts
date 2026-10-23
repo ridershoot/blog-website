@@ -5,24 +5,22 @@ import path from "node:path";
 export const PUBLISHABLE_TOP_LEVEL = ["学习", "日常", "assets"] as const;
 
 export type PrepareContentOptions = {
-  mode: "copy";
-  vaultRoot: string;
-  contentRoot: string;
-  homepageTemplate: string;
+	mode: "copy";
+	vaultRoot: string;
+	contentRoot: string;
+	homepageTemplate: string;
 };
 
-export async function prepareContent(
-  options: PrepareContentOptions,
-): Promise<void> {
-  await rm(options.contentRoot, { recursive: true, force: true });
-  await mkdir(options.contentRoot, { recursive: true });
+export async function prepareContent(options: PrepareContentOptions): Promise<void> {
+	await rm(options.contentRoot, { recursive: true, force: true });
+	await mkdir(options.contentRoot, { recursive: true });
 
-  for (const name of PUBLISHABLE_TOP_LEVEL) {
-    const source = path.join(options.vaultRoot, name);
-    const destination = path.join(options.contentRoot, name);
-    await cp(source, destination, { recursive: true });
-  }
+	for (const name of PUBLISHABLE_TOP_LEVEL) {
+		const source = path.join(options.vaultRoot, name);
+		const destination = path.join(options.contentRoot, name);
+		await cp(source, destination, { recursive: true });
+	}
 
-  const homepage = await readFile(options.homepageTemplate, "utf8");
-  await writeFile(path.join(options.contentRoot, "index.md"), homepage);
+	const homepage = await readFile(options.homepageTemplate, "utf8");
+	await writeFile(path.join(options.contentRoot, "index.md"), homepage);
 }
