@@ -63,3 +63,13 @@ mklink /D content\assets C:\path\to\Blog\assets
 ```
 
 If symlink creation fails with a privilege error, enable Developer Mode or re-run in an elevated shell—do not fall back to copying the whole Vault into `content/` for local preview.
+
+## First deploy (human)
+
+CI deploys on `main` push and `workflow_dispatch`. After Vault-only edits, refresh the Personal blog with **Actions → Deploy Personal blog → Run workflow**.
+
+One-time setup (Vault read secret + Pages source = GitHub Actions + first live URL check):
+
+```bash
+bash scripts/setup-pages-wizard.sh
+```

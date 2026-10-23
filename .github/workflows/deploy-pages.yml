@@ -42,7 +42,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version-file: package.json
+          # Matches package.json engines.node (>=22); pin a major for CI.
+          node-version: 22
           cache: pnpm
 
       - name: Install dependencies
